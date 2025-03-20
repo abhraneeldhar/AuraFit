@@ -54,6 +54,10 @@
 .tab .tabOptions .option:hover {
     opacity: 0.8;
 }
+.tab .getStartedBtn{
+    font-size: 10px;
+    padding: 0px 10px;
+}
 
 .getStartedBtn {
     border-radius: 30px;
