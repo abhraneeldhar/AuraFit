@@ -90,8 +90,6 @@ export default function Home() {
         </div></>}
 
 
-
-
       {currentIndex == 0 &&
         <Image className={styles.heroImg} src={heroImg} alt="" />
       }
@@ -102,6 +100,8 @@ export default function Home() {
       <Button className={styles.getStartedBtn}>Get Started</Button>
 
     </div>
+
+
 
 
     <div id="aboutus" className={styles.aboutSection}>
