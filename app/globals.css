@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   color: white;
+  scroll-behavior: smooth;
 }
 a{
   text-decoration: none;

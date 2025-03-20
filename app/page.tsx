@@ -33,10 +33,10 @@ export default function Home() {
           <h1>AuraFit</h1>
         </div>
         <div className={styles.tabOptions}>
-          <a href="" className={styles.option}>Home</a>
-          <a href="" className={styles.option}>Get Started</a>
+          <a href="#home" className={styles.option}>Home</a>
           <a href="" className={styles.option}>Features</a>
-          <a href="" className={styles.option}>About Us</a>
+          <a href="" className={styles.option}>Get Started</a>
+          <a href="#aboutus" className={styles.option}>About Us</a>
         </div>
         <div className={styles.rightSec}>
           <Button className={styles.getStartedBtn}>Get Started</Button>
@@ -45,7 +45,7 @@ export default function Home() {
     </div>
 
 
-    <div className={styles.heroSection}>
+    <div id="home" className={styles.heroSection}>
       <h1 className={styles.heroHeader}>Sculpt your <span>Body</span><br />Elevate your <span>Spirit</span></h1>
 
       {currentIndex == 0 && <><div className={`${styles.heroStats} ${styles.heroStat1}`}>
@@ -104,7 +104,7 @@ export default function Home() {
     </div>
 
 
-    <div className={styles.aboutSection}>
+    <div id="aboutus" className={styles.aboutSection}>
       <h1 className={styles.secitonHeading}>About Us</h1>
       <p className={styles.sectionPara}>We created AuraFit as a way for people to take care of their body and mind. To teach people about the importance of physical and mental health.</p>
 

@@ -178,10 +178,14 @@
 
 .aboutSection {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sectionPara {
     text-align: center;
+    width: 50vw;
 }
 
 .profileCardHolder {
@@ -289,5 +293,9 @@
 
     .heroStat4 {
         right: 10%;
+    }
+
+    .sectionPara{
+        width: 100%;
     }
 }
