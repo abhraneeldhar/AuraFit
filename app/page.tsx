@@ -94,10 +94,12 @@ export default function Home() {
     <div className={styles.tabMain}>
 
       <div className={styles.tab}>
-        <div className={styles.appLogo}>
-          <Image src={appLogo} alt="" />
-          <h1>AuraFit</h1>
-        </div>
+        <a href="#home">
+          <div className={styles.appLogo}>
+            <Image src={appLogo} alt="" />
+            <h1>AuraFit</h1>
+          </div>
+        </a>
         <div className={styles.tabOptions}>
           <a href="#home" className={styles.option}>Home</a>
           <a href="#features" className={styles.option}>Features</a>
@@ -137,7 +139,7 @@ export default function Home() {
       {currentIndex == 1 && <><div className={`${styles.heroStats} ${styles.heroStat1}`}>
         <Brain color="#a5cd04" size={30} />
         <p>Meditate</p>
-        <h1>1.5</h1>
+        <h1>3.2</h1>
       </div>
         <div className={`${styles.heroStats} ${styles.heroStat2}`}>
           <Activity color="#a5cd04" size={30} />
