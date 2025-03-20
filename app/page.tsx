@@ -6,7 +6,7 @@ import heroBale from "../public/heroBale.png"
 import styles from "./home.module.css"
 import appLogo from "../public/appLogo.png"
 import { Button } from "@radix-ui/themes"
-import { Clock, Dumbbell, Flame, Footprints } from "lucide-react"
+import { Activity, Brain, Clock, Dumbbell, Flame, Footprints, Lightbulb, NotebookPen } from "lucide-react"
 import picph from "../public/teamPic/picph.jpg"
 import { useEffect, useState } from "react"
 
@@ -48,26 +48,49 @@ export default function Home() {
     <div className={styles.heroSection}>
       <h1 className={styles.heroHeader}>Sculpt your <span>Body</span><br />Elevate your <span>Spirit</span></h1>
 
-      <div className={`${styles.heroStats} ${styles.heroStat1}`}>
+      {currentIndex == 0 && <><div className={`${styles.heroStats} ${styles.heroStat1}`}>
         <Clock color="#a5cd04" size={30} />
         <p>Hours</p>
         <h1>1.5</h1>
       </div>
-      <div className={`${styles.heroStats} ${styles.heroStat2}`}>
-        <Footprints color="#a5cd04" size={30} />
-        <p>Steps</p>
-        <h1>5k</h1>
+        <div className={`${styles.heroStats} ${styles.heroStat2}`}>
+          <Footprints color="#a5cd04" size={30} />
+          <p>Steps</p>
+          <h1>5k</h1>
+        </div>
+        <div className={`${styles.heroStats} ${styles.heroStat3}`}>
+          <Flame color="#a5cd04" size={30} />
+          <p>Cal</p>
+          <h1>500</h1>
+        </div>
+        <div className={`${styles.heroStats} ${styles.heroStat4}`}>
+          <Dumbbell color="#a5cd04" size={30} />
+          <p>Sets</p>
+          <h1>5</h1>
+        </div></>}
+        {currentIndex == 1 && <><div className={`${styles.heroStats} ${styles.heroStat1}`}>
+        <Brain color="#a5cd04" size={30} />
+        <p>Meditate</p>
+        <h1>1.5</h1>
       </div>
-      <div className={`${styles.heroStats} ${styles.heroStat3}`}>
-        <Flame color="#a5cd04" size={30} />
-        <p>Cal</p>
-        <h1>500</h1>
-      </div>
-      <div className={`${styles.heroStats} ${styles.heroStat4}`}>
-        <Dumbbell color="#a5cd04" size={30} />
-        <p>Sets</p>
-        <h1>5</h1>
-      </div>
+        <div className={`${styles.heroStats} ${styles.heroStat2}`}>
+          <Activity color="#a5cd04" size={30} />
+          <p>BPM</p>
+          <h1>80</h1>
+        </div>
+        <div className={`${styles.heroStats} ${styles.heroStat3}`}>
+          <Lightbulb color="#a5cd04" size={30} />
+          <p>Ideas</p>
+          <h1>15</h1>
+        </div>
+        <div className={`${styles.heroStats} ${styles.heroStat4}`}>
+          <NotebookPen color="#a5cd04" size={30} />
+          <p>Journal</p>
+          <h1>2</h1>
+        </div></>}
+
+
+
 
       {currentIndex == 0 &&
         <Image className={styles.heroImg} src={heroImg} alt="" />
