@@ -204,6 +204,9 @@
     align-items: center;
     background: rgb(212, 212, 208);
     background: linear-gradient(164deg, rgba(212, 212, 208, 1) 0%, rgba(71, 82, 47, 1) 99%);
+
+    animation: featureScroll;
+    animation-timeline: view(80% -10%);
 }
 
 .featureCard h1 {
@@ -221,6 +224,16 @@
     border-radius: 10px;
 }
 
+@keyframes featureScroll{
+    0%{
+        transform: translateY(100%);
+        scale: 0.1;
+    }
+    100%{
+        transform: none;
+        scale: 1;
+    }
+}
 
 
 .aboutSection {
@@ -256,6 +269,9 @@
     border-radius: 15px;
     background: rgb(201, 249, 11);
     background: linear-gradient(180deg, rgba(201, 249, 11, 1) 0%, rgba(169, 210, 8, 1) 38%, rgba(100, 124, 10, 1) 99%);
+
+    animation: aboutScroll;
+    animation-timeline: view(90% -10%);
 }
 
 .profileCard img {
@@ -278,6 +294,16 @@
     flex: 1;
 }
 
+@keyframes aboutScroll{
+    0%{
+        transform: translateX(-100%);
+        scale: 0.1;
+    }
+    100%{
+        transform: none;
+        scale: 1;
+    }
+}
 
 
 
