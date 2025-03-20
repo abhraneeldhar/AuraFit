@@ -120,7 +120,7 @@
     font-size: 70px;
     text-align: center;
     width: 100%;
-    top: 10%;
+    top: 5%;
 }
 
 .heroHeader span {
@@ -189,6 +189,7 @@
     gap: 20px;
     justify-content: center;
     margin: 40px 0px;
+    flex-wrap: wrap;
 }
 
 .profileCard {
@@ -265,6 +266,7 @@
 
     .heroSection .heroHeader {
         font-size: 30px;
+        top: 10%;
     }
 
     .heroImg {
