@@ -11,8 +11,15 @@ import picph from "../public/teamPic/picph.jpg"
 import { useEffect, useState } from "react"
 
 
-export default function Home() {
+import stretchImg from "../public/features/stretch.jpg"
+import cardioImg from "../public/features/cardio.jpg"
+import journal from "../public/features/journal.jpg"
+import strengthImg from "../public/features/strengthTraining.webp"
+import breahting from "../public/features/breathing.jpg"
+import meditation from "../public/features/meditation.jpg"
 
+
+export default function Home() {
   const heroImageList = [heroImg, heroBale];
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
@@ -22,6 +29,35 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+
+  const featuresArray = [
+    {
+      title: "Stretching Exercises",
+      img: stretchImg,
+    },
+    {
+      title: "Breathing Exercises",
+      img: breahting,
+    },
+    {
+      title: "Journal",
+      img: journal,
+    },
+    {
+      title: "Strength Exercises",
+      img: strengthImg,
+    },
+    {
+      title: "Guided Meditation",
+      img: meditation,
+    },
+    {
+      title: "Cardio Exercises",
+      img: cardioImg
+    }
+
+  ]
 
 
   return (<><div className={styles.main}>
@@ -34,7 +70,7 @@ export default function Home() {
         </div>
         <div className={styles.tabOptions}>
           <a href="#home" className={styles.option}>Home</a>
-          <a href="" className={styles.option}>Features</a>
+          <a href="#features" className={styles.option}>Features</a>
           <a href="" className={styles.option}>Get Started</a>
           <a href="#aboutus" className={styles.option}>About Us</a>
         </div>
@@ -68,7 +104,7 @@ export default function Home() {
           <p>Sets</p>
           <h1>5</h1>
         </div></>}
-        {currentIndex == 1 && <><div className={`${styles.heroStats} ${styles.heroStat1}`}>
+      {currentIndex == 1 && <><div className={`${styles.heroStats} ${styles.heroStat1}`}>
         <Brain color="#a5cd04" size={30} />
         <p>Meditate</p>
         <h1>1.5</h1>
@@ -97,8 +133,23 @@ export default function Home() {
         <Image className={styles.heroImg} src={heroBale} alt="" />
       }
 
-      <Button className={styles.getStartedBtn}>Get Started</Button>
+      <Button id="features" className={styles.getStartedBtn}>Get Started</Button>
 
+    </div>
+
+
+    <div  className={styles.featuresSection}>
+      <h1 className={styles.secitonHeading}>Site features</h1>
+      <p className={styles.sectionPara}>AuraFit provides the user with various feautres for a strong body and strong mind</p>
+      <div className={styles.featuresHolder}>
+        {featuresArray.map((f, index) => (
+
+          <div key={index} className={styles.featureCard}>
+            <h1>{f.title}</h1>
+            <Image src={f.img} alt="" />
+          </div>
+        ))}
+      </div>
     </div>
 
 
