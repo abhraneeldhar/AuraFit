@@ -1,15 +1,31 @@
 "use client"
 import Image from "next/image"
 import heroImg from "../public/heroImage.png"
+import heroBale from "../public/heroBale.png"
+
 import styles from "./home.module.css"
 import appLogo from "../public/appLogo.png"
 import { Button } from "@radix-ui/themes"
 import { Clock, Dumbbell, Flame, Footprints } from "lucide-react"
+import picph from "../public/teamPic/picph.jpg"
+import { useEffect, useState } from "react"
+
 
 export default function Home() {
+
+  const heroImageList = [heroImg, heroBale];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImageList.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (<><div className={styles.main}>
     <div className={styles.tabMain}>
-
 
       <div className={styles.tab}>
         <div className={styles.appLogo}>
@@ -31,7 +47,7 @@ export default function Home() {
 
     <div className={styles.heroSection}>
       <h1 className={styles.heroHeader}>Sculpt your <span>Body</span><br />Elevate your <span>Spirit</span></h1>
-      
+
       <div className={`${styles.heroStats} ${styles.heroStat1}`}>
         <Clock color="#a5cd04" size={30} />
         <p>Hours</p>
@@ -53,8 +69,51 @@ export default function Home() {
         <h1>5</h1>
       </div>
 
-      <Image className={styles.heroImg} src={heroImg} alt="" />
+      {currentIndex == 0 &&
+        <Image className={styles.heroImg} src={heroImg} alt="" />
+      }
+      {currentIndex == 1 &&
+        <Image className={styles.heroImg} src={heroBale} alt="" />
+      }
+
       <Button className={styles.getStartedBtn}>Get Started</Button>
+
+    </div>
+
+
+    <div className={styles.aboutSection}>
+      <h1 className={styles.secitonHeading}>About Us</h1>
+      <p className={styles.sectionPara}>We created AuraFit as a way for people to take care of their body and mind. To teach people about the importance of physical and mental health.</p>
+
+      <div className={styles.profileCardHolder}>
+
+        <div className={styles.profileCard}>
+          <Image src={picph} alt="" />
+          <h1>Abhraneel Dhar</h1>
+          <p>Front-End Dev</p>
+        </div>
+        <div className={styles.profileCard}>
+          <Image src={picph} alt="" />
+          <h1>Abhraneel Dhar</h1>
+          <p>Front-End Dev</p>
+        </div>
+        <div className={styles.profileCard}>
+          <Image src={picph} alt="" />
+          <h1>Abhraneel Dhar</h1>
+          <p>Front-End Dev</p>
+        </div>
+        <div className={styles.profileCard}>
+          <Image src={picph} alt="" />
+          <h1>Abhraneel Dhar</h1>
+          <p>Front-End Dev</p>
+        </div>
+        <div className={styles.profileCard}>
+          <Image src={picph} alt="" />
+          <h1>Abhraneel Dhar</h1>
+          <p>Front-End Dev</p>
+        </div>
+      </div>
+
 
     </div>
 
