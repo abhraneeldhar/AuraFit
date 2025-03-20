@@ -18,6 +18,8 @@ import strengthImg from "../public/features/strengthTraining.webp"
 import breahting from "../public/features/breathing.jpg"
 import meditation from "../public/features/meditation.jpg"
 
+import abhraneelPic from "../public/teamPic/abhraneel.jpeg"
+import harshPic from "../public/teamPic/harsh.jpeg"
 
 export default function Home() {
   const heroImageList = [heroImg, heroBale];
@@ -59,6 +61,34 @@ export default function Home() {
 
   ]
 
+
+  const aboutList = [
+    {
+      name: "Abhraneel Dhar",
+      img: abhraneelPic,
+      role: "Front-End Dev"
+    },
+    {
+      name: "Harsh V. Seth",
+      img: harshPic,
+      role: "Front-End Dev"
+    },
+    {
+      name: "Abhraneel Dhar",
+      img: picph,
+      role: "Front-End Dev"
+    },
+    {
+      name: "Abhraneel Dhar",
+      img: picph,
+      role: "Front-End Dev"
+    },
+    {
+      name: "Abhraneel Dhar",
+      img: picph,
+      role: "Front-End Dev"
+    },
+  ]
 
   return (<><div className={styles.main}>
     <div className={styles.tabMain}>
@@ -138,7 +168,7 @@ export default function Home() {
     </div>
 
 
-    <div  className={styles.featuresSection}>
+    <div className={styles.featuresSection}>
       <h1 className={styles.secitonHeading}>Site features</h1>
       <p className={styles.sectionPara}>AuraFit provides the user with various feautres for a strong body and strong mind</p>
       <div className={styles.featuresHolder}>
@@ -160,32 +190,14 @@ export default function Home() {
       <p className={styles.sectionPara}>We created AuraFit as a way for people to take care of their body and mind. To teach people about the importance of physical and mental health.</p>
 
       <div className={styles.profileCardHolder}>
+        {aboutList.map((person, index) => (
 
-        <div className={styles.profileCard}>
-          <Image src={picph} alt="" />
-          <h1>Abhraneel Dhar</h1>
-          <p>Front-End Dev</p>
-        </div>
-        <div className={styles.profileCard}>
-          <Image src={picph} alt="" />
-          <h1>Abhraneel Dhar</h1>
-          <p>Front-End Dev</p>
-        </div>
-        <div className={styles.profileCard}>
-          <Image src={picph} alt="" />
-          <h1>Abhraneel Dhar</h1>
-          <p>Front-End Dev</p>
-        </div>
-        <div className={styles.profileCard}>
-          <Image src={picph} alt="" />
-          <h1>Abhraneel Dhar</h1>
-          <p>Front-End Dev</p>
-        </div>
-        <div className={styles.profileCard}>
-          <Image src={picph} alt="" />
-          <h1>Abhraneel Dhar</h1>
-          <p>Front-End Dev</p>
-        </div>
+          <div key={index} className={styles.profileCard}>
+            <Image src={person.img} alt="" />
+            <h1>{person.name}</h1>
+            <p>{person.role}</p>
+          </div>
+        ))}
       </div>
 
 
