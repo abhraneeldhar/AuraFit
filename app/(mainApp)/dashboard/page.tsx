@@ -6,8 +6,8 @@ import Apple from "next-auth/providers/apple"
 import { useSession } from "next-auth/react"
 import { useEffect } from "react"
 export default function Dashboard() {
-    const{data:session}=useSession();
-    
+    const { data: session } = useSession();
+
     return (
         <div className={styles.main}>
             <h1 className={styles.welcomeH1}>Welcome {session?.user.name}</h1>
@@ -54,26 +54,34 @@ export default function Dashboard() {
             <div className={styles.wellnessDiv}>
                 <h2>Wellness Categories</h2>
                 <div className={styles.categoryHolder}>
-                    <div className={styles.categoryDiv}>
-                        <Brain/>
-                        <h3>Mental Health</h3>
-                        <p>Meditations, breathing exercises, and mindfulness practices</p>
-                    </div>
-                    <div className={styles.categoryDiv}>
-                        <Dumbbell/>
-                        <h3>Physical Fitness</h3>
-                        <p>Workouts, yoga, and exercise routines</p>
-                    </div>
-                    <div className={styles.categoryDiv}>
-                        <AppleIcon/>
-                        <h3>Nutrition</h3>
-                        <p>Healthy recipes and eating guidance</p>
-                    </div>
-                    <div className={styles.categoryDiv}>
-                        <Book/>
-                        <h3>Journal</h3>
-                        <p>Track thoughts, feelings, and gratitude</p>
-                    </div>
+                    <a href="https://mentalphysicalhealth-csbs-designthinking.vercel.app/mental-health" target="_blank">
+                        <div className={styles.categoryDiv}>
+                            <Brain />
+                            <h3>Mental Health</h3>
+                            <p>Meditations, breathing exercises, and mindfulness practices</p>
+                        </div>
+                    </a>
+                    <a href="https://mentalphysicalhealth-csbs-designthinking.vercel.app/fitness" target="_blank">
+                        <div className={styles.categoryDiv}>
+                            <Dumbbell />
+                            <h3>Physical Fitness</h3>
+                            <p>Workouts, yoga, and exercise routines</p>
+                        </div>
+                    </a>
+                    <a href="https://mentalphysicalhealth-csbs-designthinking.vercel.app/nutrition" target="_blank">
+                        <div className={styles.categoryDiv}>
+                            <AppleIcon />
+                            <h3>Nutrition</h3>
+                            <p>Healthy recipes and eating guidance</p>
+                        </div>
+                    </a>
+                    <a href="https://mentalphysicalhealth-csbs-designthinking.vercel.app/journal" target="_blank">
+                        <div className={styles.categoryDiv}>
+                            <Book />
+                            <h3>Journal</h3>
+                            <p>Track thoughts, feelings, and gratitude</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>)
