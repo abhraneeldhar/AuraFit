@@ -1,0 +1,159 @@
+.childMain {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    border: none;
+    outline: none;
+    padding-bottom: 50px;
+}
+
+.main {
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.welcomeH1 {
+    font-size: 25px;
+}
+
+.feelingDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-color: rgb(23, 23, 23);
+    padding: 15px;
+    color: white;
+}
+
+.feelingDiv h2 {
+    font-size: 18px;
+}
+
+.feelingDiv .emojiHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.emojiItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.emojiItem p {
+    font-size: 25px;
+}
+
+.progressMain {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-color: rgb(23, 23, 23);
+    padding: 15px;
+    color: white;
+}
+
+.progressMain h2 {
+    font-size: 18px;
+}
+
+.dailyProgressHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.progressDiv {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    border-radius:20px 10px;
+    background-color: rgb(4, 34, 94);
+    padding: 15px 25px;
+    flex: 1;
+    transition: all 0.3s;
+}
+.progressDiv:hover{
+    background-color: rgb(13, 50, 124);
+}
+
+.progressDiv p {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progressDiv h2 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.progressDiv h3 {
+    font-weight: 400;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.wellnessDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-color: rgb(23, 23, 23);
+    padding: 15px;
+    color: white;
+}
+
+.wellnessDiv h2 {
+    font-size: 18px;
+}
+
+.categoryHolder {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.categoryDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgb(4, 34, 94);
+    padding: 20px 10px;
+    border-radius: 20px 10px;
+    gap: 5px;
+    transition: all 0.3s;
+}
+.categoryDiv:hover{
+    background-color: rgb(13, 50, 124);
+}
+.categoryDiv h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.categoryDiv p {
+    opacity: 0.8;
+    font-size: 12px;
+    text-align: center;
+}

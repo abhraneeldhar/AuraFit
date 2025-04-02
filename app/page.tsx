@@ -7,7 +7,7 @@ import styles from "./home.module.css"
 import appLogo from "../public/appLogo.png"
 import { Button } from "@radix-ui/themes"
 import { Activity, Brain, Clock, Dumbbell, Flame, Footprints, Lightbulb, NotebookPen } from "lucide-react"
-import picph from "../public/teamPic/picph.jpg"
+import picph from "../public/teamPic/picPh.png"
 import { useEffect, useState } from "react"
 
 
@@ -20,6 +20,8 @@ import meditation from "../public/features/meditation.jpg"
 
 import abhraneelPic from "../public/teamPic/abhraneel.jpeg"
 import harshPic from "../public/teamPic/harsh.jpeg"
+import adityaPic from "../public/teamPic/aditya.jpeg"
+import { signIn } from "next-auth/react"
 
 export default function Home() {
   const heroImageList = [heroImg, heroBale];
@@ -71,22 +73,22 @@ export default function Home() {
     {
       name: "Harsh V. Seth",
       img: harshPic,
+      role: "Backend Dev"
+    },
+    {
+      name: "Aditya Narayan",
+      img: adityaPic,
       role: "Front-End Dev"
     },
     {
-      name: "Abhraneel Dhar",
+      name: "Anuvab Das",
       img: picph,
-      role: "Front-End Dev"
+      role: "Designer"
     },
     {
-      name: "Abhraneel Dhar",
+      name: "Binayak Panda",
       img: picph,
-      role: "Front-End Dev"
-    },
-    {
-      name: "Abhraneel Dhar",
-      img: picph,
-      role: "Front-End Dev"
+      role: "Backend Dev"
     },
   ]
 
@@ -103,11 +105,11 @@ export default function Home() {
         <div className={styles.tabOptions}>
           <a href="#home" className={styles.option}>Home</a>
           <a href="#features" className={styles.option}>Features</a>
-          <a href="" className={styles.option}>Get Started</a>
+          <a className={styles.option} onClick={()=>signIn("google")}>Get Started</a>
           <a href="#aboutus" className={styles.option}>About Us</a>
         </div>
         <div className={styles.rightSec}>
-          <Button className={styles.getStartedBtn}>Get Started</Button>
+          <Button onClick={()=>signIn("google")} className={styles.getStartedBtn}>Get Started</Button>
         </div>
       </div>
     </div>
@@ -165,7 +167,7 @@ export default function Home() {
         <Image className={styles.heroImg} src={heroBale} alt="" />
       }
 
-      <Button id="features" className={styles.getStartedBtn}>Get Started</Button>
+      <Button id="features" className={styles.getStartedBtn} onClick={()=>signIn("google")}>Get Started</Button>
 
     </div>
 
