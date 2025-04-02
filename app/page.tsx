@@ -7,7 +7,7 @@ import styles from "./home.module.css"
 import appLogo from "../public/appLogo.png"
 import { Button } from "@radix-ui/themes"
 import { Activity, Brain, Clock, Dumbbell, Flame, Footprints, Lightbulb, NotebookPen } from "lucide-react"
-import picph from "../public/teamPic/picPh.png"
+import picph from "../public/teamPic/picph.png"
 import { useEffect, useState } from "react"
 
 
